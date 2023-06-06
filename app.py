@@ -1,13 +1,8 @@
 import streamlit as st
 import openai
 
-pip install --upgrade streamlit
-
-
-try:
-    openai.api_key = st.secrets["api_key"]
-except KeyError:
-    st.error("API key not found. Please make sure the 'api_key' secret is set in Streamlit secrets.")
+# Set up the OpenAI API
+openai.api_key = st.secrets["api_key"]
 
 
 
