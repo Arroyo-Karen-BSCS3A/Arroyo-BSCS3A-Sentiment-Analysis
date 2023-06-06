@@ -1,6 +1,9 @@
 import streamlit as st
 import openai
 
+pip install --upgrade streamlit
+
+
 try:
     openai.api_key = st.secrets["api_key"]
 except KeyError:
