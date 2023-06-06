@@ -22,7 +22,7 @@ def generate_code(input_string):
 def main():
     st.set_page_config(page_title="C++ Tutorial App")
     st.title("C++ Tutorial App - Generate Code for Basic Programming Tasks")
-    st.text("by: Karen Arroyo BSCS 3A-AI")
+    st.text("by: Karen Arroyo BSCS 3A")
     instructions = ['1. Code for a factorial function',
                     '2. Code to sort an array using bubble sort algorithm',
                     '3. Code for a linked list data structure',
