@@ -1,14 +1,17 @@
 import streamlit as st
 import openai
 
-# Set up the OpenAI API
-openai.api_key = st.secrets["api_key"]
+try:
+    openai.api_key = st.secrets["api_key"]
+except KeyError:
+    st.error("API key not found. Please make sure the 'api_key' secret is set in Streamlit secrets.")
+
 
 
 def generate_code(input_string):
     response = openai.Completion.create(
         engine="text-davinci-003",
-        prompt=input_string +"\n",
+        prompt=input_string +"s\n",
         max_tokens=1024,
         top_p=1.0,
         frequency_penalty=0.0,
