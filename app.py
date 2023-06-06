@@ -1,10 +1,10 @@
 import streamlit as st
 import openai
+import toml
 
 # Set up the OpenAI API
-openai.api_key = st.secrets["api_key"]
-
-
+secrets = toml.load(".streamlit/secrets.toml")
+openai.api_key = secrets["env"]["api_key"]
 
 def generate_code(input_string):
     response = openai.Completion.create(
