@@ -1,4 +1,11 @@
 #Input the relevant libraries
+import os
+import pandas as pd
+
+file_path = os.path.join(os.getcwd(), 'dataset.csv')
+df = pd.read_csv(file_path)
+
+
 import streamlit as st
 import altair as alt
 import nltk
