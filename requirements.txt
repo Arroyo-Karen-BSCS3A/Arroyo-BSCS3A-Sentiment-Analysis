@@ -1,2 +1,10 @@
 streamlit
-openai
+streamlit_option_menu
+nltk
+numpy
+pandas
+textblob
+spacy
+scikit-learn
+matplotlib
+seaborn
